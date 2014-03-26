@@ -1,0 +1,1 @@
+Copyright © 2013 Yootag | <a href="<?php ABSPATH?>/en/contact/contact.php">Contact</a>

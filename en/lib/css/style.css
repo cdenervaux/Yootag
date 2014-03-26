@@ -1,0 +1,663 @@
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+
+/* =============================================================================
+   Base definitions
+   ========================================================================== */
+
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ * 2. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
+ */
+
+html { 
+   	font-size: 100%; 
+   	-webkit-text-size-adjust: 100%; 
+   	-ms-text-size-adjust: 100%; 
+	}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate
+ * Also: hot pink! (or customize the background color to match your design)
+ */
+
+::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+
+/* Micro clear fix */
+.cf:before, .cf:after { content: ""; display: table; }
+.cf:after { clear: both; }
+.cf { zoom: 1; }
+
+
+body {
+	margin: 0; 
+	font-size: 1em; 
+	line-height: 1.4;
+	scrollbar-face-color: #D9DEE1; 
+	scrollbar-shadow-color: #999999;
+	scrollbar-highlight-color: #D9DEE1; 
+	scrollbar-3dlight-color: #FFFFFF;
+	scrollbar-darkshadow-color: #424952; 
+	scrollbar-track-color: #D9DEE1;
+	scrollbar-arrow-color: #424952; 										
+	background-color:#FFFFFF;
+	background: url('../../img/bg.gif'); 
+	}
+	
+a:link {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	color: #000000; 
+	text-decoration: underline;
+	}    
+
+a:visited {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	color :#000000; 
+	text-decoration: underline;
+	} 
+
+a:active {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	color: #000000; 
+	text-decoration: underline;
+	}
+
+a:hover {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	color: #000000; 
+	text-decoration: none;
+	}
+	
+li {
+	display: inline;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/********************************************************
+   Custom definitions
+   
+ID:	   #page|gen_item_subitem_action
+Ex:	   #welcome_logo
+	   #tagmarklet_content
+
+Class: .page|gen_item_subitem_action
+Ex:    .dashboard_modal_listedit_open
+	   .gen_modal_close	  
+********************************************************/
+
+
+/********************************************************
+Standard generic layout
+********************************************************/
+#gen_header {
+	width: 100%;	
+	margin-top: 0px;
+	background: #fff;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+	}
+	
+#gen_header_wrapper {
+	width: 960px;
+	margin-left: auto;
+    margin-right: auto;
+	}
+		
+#gen_logo {
+	font-family: Arial, sans-serif;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: bold;
+	float: left;
+	}
+	
+#gen_navbar {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	float: right;
+	}
+
+#gen_content {
+	width: 960px;
+	margin-left: auto;
+    margin-right: auto;
+	}
+
+#gen_section {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: auto;
+    margin-right: auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+    background:#fff;
+	text-align: center;
+	border: 1px solid #dedede;
+    background-color: #f7f7f7;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	}
+
+#gen_footer {
+	width: 960px;
+	margin-left: auto;
+    margin-right: auto;
+	text-align: center;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	border: 1px solid #dedede;
+    background: #fff;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	}	
+
+.gen_msgbox {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	}
+	
+
+/********************************************************
+Welcome page layout
+********************************************************/
+#welcome_img_main {
+	display: inline-block;
+	vertical-align: middle;
+	padding-right: 50px;
+	}
+	
+#welcome_text_main {
+	text-align:center;
+	font-family: Arial, sans-serif; 
+	font-weight: normal; 
+	font-size: 35px;
+	line-height: 80px;
+	display: inline-block;
+	vertical-align: middle;
+	}
+	
+.welcome_steps {
+	display: inline-block;
+	vertical-align: middle;
+	font-weight: bold;
+	padding-top: 25px;
+	margin: 15px;
+	}
+	
+
+/********************************************************
+Login / Register page layout
+********************************************************/
+#gen_form_login {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	display: inline-block;
+	text-align: left;
+	vertical-align: top;
+	background-color:#E8F0FF;
+	margin-top: 25px;
+    margin-bottom: 25px;
+	margin-left: 25px;
+    margin-right: 100px;
+	}
+
+#logreg_form_register {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	display: inline-block;
+	text-align: left;
+	vertical-align: top;
+	background-color:#E8F0FF;
+	margin-top: 25px;
+    margin-bottom: 25px;
+	margin-left: 100px;
+    margin-right: 25px;
+	width: 270px;
+	}
+
+
+/********************************************************
+Logreg / Frame - Modal Forgot password
+********************************************************/
+#gen_modal_forgot {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.3);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 100ms ease-in;
+	-moz-transition: opacity 100ms ease-in;
+	transition: opacity 100ms ease-in;
+	pointer-events: none;
+}
+
+#gen_modal_forgot:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+#gen_modal_forgot > div {
+	width: 300px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+    background:#fff;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+
+#gen_modal_forgot_link {
+	font-family: Arial, sans-serif;
+	font-size: 9px;
+	font-style: normal;
+	display: inline-block;
+	margin-left: 55px;
+}
+
+.gen_modal_edit {
+	color: #000000;
+	line-height: 25px;
+	position: absolute;
+	right: 192px;
+	text-align: center;
+	top: 5px;
+	height: 11px;
+	width: 11px;
+	text-decoration: none;
+	font-weight: bold;
+	background-image: url('../../img/modal_edit_off.jpg');
+}
+
+.gen_modal_edit:hover {
+	background-image: url('../../img/modal_edit_on.jpg');
+}
+
+.gen_modal_back {
+	color: #000000;
+	line-height: 25px;
+	position: absolute;
+	right: 192px;
+	text-align: center;
+	top: 5px;
+	height: 11px;
+	width: 11px;
+	text-decoration: none;
+	font-weight: bold;
+	background-image: url('../../img/modal_back_off.jpg');
+}
+
+.gen_modal_back:hover {
+	background-image: url('../../img/modal_back_on.jpg');
+}
+
+.gen_modal_remove {
+	color: #000000;
+	line-height: 25px;
+	position: absolute;
+	right: 7px;
+	text-align: center;
+	top: 5px;
+	height: 11px;
+	width: 11px;
+	text-decoration: none;
+	font-weight: bold;
+	background-image: url('../../img/modal_close_off.jpg');
+}
+
+.gen_modal_remove:hover {
+	background-image: url('../../img/modal_close_on.jpg');
+}
+
+.gen_modal_close {
+	color: #000000;
+	line-height: 25px;
+	position: absolute;
+	right: 6px;
+	text-align: center;
+	top: 5px;
+	height: 11px;
+	width: 11px;
+	text-decoration: none;
+	font-weight: bold;
+	background-image: url('../../img/modal_close_off.jpg');
+}
+
+.gen_modal_close:hover {
+	background-image: url('../../img/modal_close_on.jpg');
+}
+
+
+/********************************************************
+Frame page layout
+********************************************************/
+#frame_content {
+	margin-left: auto;
+    margin-right: auto;
+	background:#ffffff;
+	height: 290px;
+	}
+	
+#frame_section {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	margin-left: auto;
+    margin-right: auto;
+	padding: 20px;
+	}
+	
+#frame_boxshot {
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 20px;
+	}
+
+#frame_detail {
+	display: inline-block;
+	vertical-align: middle;
+	}
+	
+#frame_price {
+	font-weight: bold;
+	color: #CC0000;
+}
+
+#frame_product {
+	text-align: left;
+}
+
+#frame_product_result {
+	display: none;
+	position: relative;
+	height: 240px;
+}
+
+#frame_product_result_msg {
+	display:table-cell;
+	height: 240px;
+	width: 390px;
+	vertical-align:middle;
+	text-align: center;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#frame_product_result_gosite {
+	position: absolute;
+	bottom: 15px;
+	left: 20px;
+}
+
+#frame_product_result_goprod {
+	position: absolute;
+	bottom: 15px;
+	right: 20px;
+}
+
+#frame_close {
+	line-height: 25px;
+	position: absolute;
+	right: 6px;
+	text-align: center;
+	top: 5px;
+	height: 11px;
+	width: 11px;
+	text-decoration: none;
+	font-weight: bold;
+	background-image: url('../../img/modal_close_off.jpg');
+}
+
+#frame_close:hover {
+	background-image: url('../../img/modal_close_on.jpg');
+}
+
+
+/********************************************************
+Dashboard page layout
+********************************************************/
+.gen_menu {
+	display: table;
+	width: 915px;
+	margin-left: 11px;
+	}
+
+.gen_menu_left {
+	display: table-cell;
+    text-align: left;
+    font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	}
+	
+.gen_menu_right{
+	display: table-cell;
+    text-align: right;
+	}
+
+#dashboard_editlist {
+	display: table-cell;
+    text-align: right;
+	}
+	
+.gen_list {
+	text-align: left;
+	}
+
+#dashboard_crumblist {
+	text-align: left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	}
+	
+
+/********************************************************
+Dashboard page - Product info
+********************************************************/
+.dashboard_item {
+	display: inline-block;
+	width: 190px;
+	height: 280px;
+	margin: 11px;
+	padding-top: 2px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	vertical-align: top;
+	border: 1px solid #dedede;
+    background-color: #f7f7f7;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	position: relative;
+}
+
+.dashboard_item_boxshot {	
+	margin-top: 8px;
+}
+
+.dashboard_item_site {
+	font-size: 11px;
+	color: #969696;
+}
+
+.dashboard_item_added {
+    font-size: 11px;
+	color: #969696;
+}
+
+.dashboard_item_title {
+    font-weight: bold;
+}
+
+.dashboard_item_price {
+    font-weight: bold;
+	color:#CC0000;
+}
+	
+a.dashboard_button_buy {
+	position: absolute;
+	left: 30px;
+	top: 245px;
+	cursor: pointer;
+	text-align: center;
+   	font-family: Arial, sans-serif;
+	font-size: 15px;
+    color: #fff;
+	padding: 2px;
+	margin: 5px;
+	width: 135px;
+	background-color: #95c033;
+    border-radius: 5px;
+	border: 1px solid #8bae42;
+    -moz-box-shadow: 0 1px 0 #b7db81 inset, 0 -1px 0 #b7db81 inset;
+    -webkit-box-shadow: 0 1px 0 #b7db81 inset, 0 -1px 0 #b7db81 inset;
+    box-shadow: 0 1px 0 #b7db81 inset, 0 -1px 0 #b7db81 inset;
+    text-shadow: 0 1px #63852b;
+	text-decoration: none;
+}
+
+a.dashboard_button_buy:hover {
+	background-color: #9fcc37;
+}
+
+
+/********************************************************
+Dashboard page - Product Modal
+********************************************************/
+.dashboard_modal_editprod, .dashboard_modal_delprod, #dashboard_modal_editlist_edit, #dashboard_modal_editlist_delete, #dashboard_modal_editlist_create {
+	display: none;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 100%;
+	width: 100%;
+	vertical-align: top;
+	text-align: center;
+	background:#FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	z-index: 99999;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+
+/********************************************************
+Lists page - List info
+*********************************************************/
+.lists_item {
+	display: inline-block;
+	width: 97%;
+	height: 50px;
+	margin-top: 11px;
+	margin-bottom: 11px;
+	padding-top: 2px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	text-align: left;
+	vertical-align: top;
+	border: 1px solid #dedede;
+    background-color: #f7f7f7;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	position: relative;
+}
+
+.gen_section_title {
+	text-align: left;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.gen_wrapper {
+	width: 100%;
+	height:100%;
+	position: relative;
+}
+
+#dashboard_modal_editlist {
+	display: none;
+	position: absolute;
+	width: 300px;
+	vertical-align: top;
+	text-align: center;
+	background:#FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	z-index: 99999;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: 1px solid #dedede;
+    background-color: #f7f7f7;
+
+}
+
+.dashboard_modal_editlist_name {
+	display:inline-block;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: top;
+}
+
+.dashboard_modal_editlist_options {
+	display:inline-block;
+	margin-left: 5px;
+	font-size: 11px;
+	color: #969696;
+}
+
+.dashboard_modal_editlist_lastupdate {
+	display:inline-block;
+	font-size: 11px;
+	color: #969696;
+	top: 3px;
+	right: 8px;
+	position: absolute;
+}
