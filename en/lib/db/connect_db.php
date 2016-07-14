@@ -1,9 +1,9 @@
 <?php
 // MySQL database connection variables
-$host = "dev.yootag.com";
-$user = "frenchyus";
-$pass = "Cdn160176";
-$bdd = "frenchyus";
+$host = "";
+$user = "";
+$pass = "";
+$bdd = "";
 
 // MySQLi connection to the database 
 $dbcon = mysqli_connect($host, $user, $pass, $bdd);
